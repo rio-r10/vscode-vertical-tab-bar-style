@@ -13,7 +13,7 @@ IntelliJで縦のタブに慣れていると、VSCodeを使う時に一番スト
 ```
     "vscode_custom_css.imports": [
         "file:///Users/PATH_TO_FILE/vscode-style.css"
-    ],
+    ]
 ```
 3. ファイルのパンくずの表示のstyleは諦めたので、表示をOFFにするようにsettings.jsonに追加する。
 ```
