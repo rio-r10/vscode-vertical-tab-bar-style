@@ -1,0 +1,87 @@
+/* 諦めるもの * /
+
+/* ファイルのパンくず表示は諦める */
+/*
+{
+    "breadcrumbs.enabled": false,
+}
+*/
+
+/* 画面を分割したりする右上のアイコンは諦める */
+.editor-actions {
+  display: none;
+}
+
+/* containerをflexにする */
+.monaco-workbench .part.editor > .content .editor-group-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+/* ここからタブ側(左) のスタイル */
+.monaco-workbench > .part.editor > .content .editor-group-container > .title {
+  overflow: scroll;
+  height: 100% !important;
+  width: 250px; /* タブの幅は固定で250pxにしてあるので好きな数字にしてください */
+}
+
+.monaco-workbench .part.editor > .content .editor-group-container > .title.tabs > .tabs-and-actions-container {
+  height: 100%;
+  width: 250px; /* タブの幅は固定で250pxにしてあるので好きな数字にしてください */
+}
+
+.monaco-workbench .part.editor > .content .editor-group-container > .title.tabs > .tabs-and-actions-container > .monaco-scrollable-element {
+  height: 100% !important;
+}
+
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container {
+  flex-direction: column;
+  height: 100%;
+  width: auto;
+}
+
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab.sizing-fit {
+  width: 100%;
+  min-width: auto;
+}
+
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab.sizing-fit .monaco-icon-label {
+  overflow: hidden;
+  width: calc(250px - 30px); /* タブのクローズボタン置くためのサイズ。タブの幅は固定で250pxにしてあるので好きな数字にしてください */
+}
+
+
+/* ここからエディター側(右)のスタイル */
+.monaco-workbench .part.editor > .content .editor-group-container > .editor-container {
+  width: calc(100% - 250px); /* タブの幅は固定で250pxにしてあるので好きな数字にしてください */
+  height: 100% !important;
+}
+
+.monaco-workbench .part.editor > .content .editor-group-container > .editor-container > .editor-instance
+> .monaco-editor {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.monaco-workbench .part.editor > .content .editor-group-container > .editor-container > .editor-instance
+> .monaco-editor > .overflow-guard {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.monaco-workbench .part.editor > .content .editor-group-container > .editor-container > .editor-instance
+> .monaco-editor > .overflow-guard > .editor-scrollable {
+  width: calc(100% - 68px) !important;
+  height: 100% !important;
+}
+
+.monaco-workbench .part.editor > .content .editor-group-container > .editor-container > .editor-instance
+> .monaco-editor > .overflow-guard > .minimap {
+    transform: translateX(-250px); /* タブの幅は固定で250pxにしてあるので好きな数字にしてください */
+    height: 100% !important;
+}
+
+.monaco-editor .find-widget.visible {
+    transform: translateX(-140px); /* 検索窓の位置ずらす。お好みで */
+}
